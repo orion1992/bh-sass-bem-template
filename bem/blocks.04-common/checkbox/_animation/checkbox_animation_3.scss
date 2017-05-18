@@ -1,0 +1,19 @@
+.checkbox_animation_3 {
+  input {
+    + label span:after {
+      height: 44px; //for3
+      width: 200%;
+    }
+    &:checked + label span:after {
+      background: url('/images/svg/checkbox.svg') 17% 83% no-repeat; //for 3
+      background-size: 13px 11px;
+      animation: backgroundCheckbox3 0.3s linear;
+    }
+  }
+}
+
+
+@keyframes backgroundCheckbox3 {
+  0% { opacity: 0; background-size: 26px 22px; background-position: 50% 50%; transform: rotate(0deg)}
+  100% { opacity: 1; background-size: 13px 11px; background-position: 17% 83%; transform: rotate(360deg)}
+}

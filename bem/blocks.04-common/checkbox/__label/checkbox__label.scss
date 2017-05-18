@@ -1,0 +1,24 @@
+label.checkbox__label {
+  display: inline-block;
+  height: 24px;
+  padding-left: 0 !important;
+  font-size: 14px;
+  font-weight: normal;
+  user-select: none;
+  line-height: 24px;
+  span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 9px;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #cec9b2;
+    &:after {
+      content:'';
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

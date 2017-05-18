@@ -1,0 +1,13 @@
+.radio {
+  margin: 0;
+  input {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover, &:focus {
+    outline: none;
+  }
+  
+}

@@ -1,0 +1,8 @@
+.input {
+  position: relative;
+  &.error {
+    .input__error-msg {
+      display: block;
+    }
+  }
+}

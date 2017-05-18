@@ -1,0 +1,8 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@if $responsive != true {
+   //TODO: disable media queries grid
+   .container {
+       width: $container-md !important;
+   }
+}

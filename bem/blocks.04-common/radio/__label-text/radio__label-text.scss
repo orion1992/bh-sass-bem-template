@@ -1,0 +1,9 @@
+.radio__label-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+
+  &::selection {
+    background: transparent;
+  }
+}

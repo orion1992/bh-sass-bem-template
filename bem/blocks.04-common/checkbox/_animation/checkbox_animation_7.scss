@@ -1,0 +1,22 @@
+.checkbox_animation_7 {
+  input {
+    + label span:after {
+      height: 22px;
+      width: 100%;
+
+    }
+    &:checked + label span:after {
+      //width: 500%; //for7
+      //height: 110px;
+      background: url('/images/svg/checkbox.svg') 50% 50% no-repeat; //for 7
+      background-size: 13px 11px;
+      animation: backgroundCheckbox7 0.5s linear; //for7
+    }
+  }
+}
+
+
+@keyframes backgroundCheckbox7 {
+  0% { opacity: 0; background-size: 104px 88px; background-position: 50% 50%; width: 500%; height: 110px;}
+  100% { opacity: 1; background-size: 13px 11px; background-position: 5px 94px; width: 500%; height: 110px;}
+}

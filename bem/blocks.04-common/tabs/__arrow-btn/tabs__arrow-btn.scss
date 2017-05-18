@@ -1,0 +1,16 @@
+.tabs__arrow-btn {
+  display: none;
+  width: 35px;
+  height: 41px;
+  border: 1px solid #e6e3d7;
+  border-bottom: 1px solid transparent;
+  background: #f7f6f2;
+  @media (max-width: $screen-xss-max ) {
+    display: inline-block;
+  }
+  &:hover, &:focus {
+    outline: none;
+    cursor: pointer;
+  }
+
+}

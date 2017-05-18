@@ -1,0 +1,10 @@
+.tabs__tab-link {
+  a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    &:hover, &:focus {
+      outline: none;
+    }
+  }
+}

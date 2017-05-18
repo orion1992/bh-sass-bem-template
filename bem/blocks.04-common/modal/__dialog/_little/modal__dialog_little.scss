@@ -1,0 +1,9 @@
+.modal__dialog_little {
+  width: 500px;
+  @media (max-width: $screen-xs-max ) {
+    width: 450px;
+  }
+  @media (max-width: $screen-xss-max ) {
+      width: 100%;
+  }
+}

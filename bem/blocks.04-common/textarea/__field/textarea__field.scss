@@ -1,0 +1,8 @@
+.textarea__field {
+  display: block;
+  resize: none;
+  border: 2px solid #cccccc;
+  &:focus {
+    outline: none;
+  }
+}

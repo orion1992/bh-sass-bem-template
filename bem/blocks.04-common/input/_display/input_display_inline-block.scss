@@ -1,0 +1,6 @@
+.input_display_inline-block {
+  display: inline-block;
+  @media (max-width: $screen-xss-max) {
+    vertical-align: middle;
+  }
+}

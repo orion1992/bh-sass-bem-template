@@ -1,0 +1,35 @@
+  html, body {
+    height: 100%;
+    //font-family: $ff-regular, sans-serif;
+    //color: $black;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+  }
+  label {
+    font-weight: inherit;
+  }
+  @media (max-width: $screen-xss-max ) {
+    .row .col-xs-11 {
+      max-width: 290px;
+    }
+  }
+  input {
+    -webkit-appearance: none;
+    @media (max-width: $screen-md-max ) {
+      box-shadow: none;
+    }
+  }
+  ul {
+    //margin: 0 !important;
+    padding: 0;
+    list-style-type: none;
+  }
+  .equal-height {
+    display: none;
+  }

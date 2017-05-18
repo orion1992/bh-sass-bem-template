@@ -1,0 +1,8 @@
+.input_type_submit {
+  border: none;
+  box-shadow: none;
+  background: none;
+  &:hover, &:focus {
+      outline: none;
+  }
+}

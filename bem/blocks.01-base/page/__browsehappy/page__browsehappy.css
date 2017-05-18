@@ -1,0 +1,9 @@
+.page__browsehappy {
+  display: block;
+  padding: 0.5em;
+  margin: 0;
+  background: #fdf6e3;
+  border: 1px #f2ecda solid;
+  color: #000;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+.select {
+
+  @include clearfix;
+  &.error {
+    .select__error-msg {
+      display: block;
+    }
+  }
+}

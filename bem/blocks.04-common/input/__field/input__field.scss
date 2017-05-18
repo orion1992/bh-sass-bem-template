@@ -1,0 +1,9 @@
+.input__field {
+  height: 33px;
+  border: 2px solid #cccccc;
+  &:hover, &:focus {
+    outline: none;
+  }
+  z-index: 20;
+  position: relative;
+}

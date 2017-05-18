@@ -1,0 +1,9 @@
+.modal__dialog {
+  &-custom {
+    margin: 30px auto;
+    @media (max-width: $screen-xss-max) {
+      margin: 0;
+      height: 100vh;
+    }
+  }
+}

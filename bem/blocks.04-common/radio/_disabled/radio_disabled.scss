@@ -1,0 +1,16 @@
+.radio_disabled {
+  filter: grayscale(100%);
+
+  pointer-events: none;
+  &:hover, &:focus {
+    cursor: default;
+  }
+  color: gray;
+  .radio__field {
+    background: #eaeaea !important;
+  }
+  .radio__label-text {
+    color: gray;
+  }
+
+}

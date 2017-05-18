@@ -1,0 +1,58 @@
++ div.selectize-control {
+  font-size: 16px;
+  height: 36px;
+  .selectize-input {
+
+    height: 36px;
+    padding: 0;
+    padding-left: 15px;
+    border-radius: 18px;
+    border: 1px solid #cdc8b0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    z-index: 50;
+    line-height: 36px;
+    font-size: 16px;
+    background: #fff;
+    input {
+      font-size: 16px;
+      padding-left: 15px;
+      width: 90% !important;
+    }
+    &:after {
+      position: absolute;
+      border: none !important;
+      top: 0;
+      right: 5px;
+      margin-top: 0;
+      width: 18px;
+      height: 100%;
+      background: url(/images/svg/arrow-down-select.svg) no-repeat 50% 50%;
+      transition: all 0.2s linear;
+    }
+    &.dropdown-active {
+      z-index: 101;
+      &:after {
+        margin-top: 0;
+        transform: rotate(180deg);
+      }
+      + .selectize-dropdown{
+        animation: chDrop 0.4s linear;
+        z-index: 100;
+      }
+    }
+  }
+  .selectize-dropdown {
+    margin-top: -20px;
+    .selectize-dropdown-content {
+      padding-top: 25px;
+      .option {
+        padding-left: 15px;
+        font-size: 16px;
+        &.active {
+          background: #cec9b1;
+        }
+      }
+    }
+  }
+}

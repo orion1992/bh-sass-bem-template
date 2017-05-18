@@ -1,0 +1,10 @@
+.list__elem {
+  font-size: 16px;
+  line-height: 25px;
+  span.rub {
+    font-family: sans-serif;
+  }
+  @media (max-width: $screen-md-max ) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,18 @@
+
+$screen-xss-max: 479px;
+
+//colors
+
+
+
+@mixin last-child-margin($margin, $direction) {
+  &:last-child {
+    margin-#{$direction}: $margin;
+  }
+}
+
+//@import "mixin/mixin";
+//Переопределение переменных Bootstrap должно производиться до этой строчки
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+//bootstrap mixins
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins";

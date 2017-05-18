@@ -1,0 +1,11 @@
+.modal__link-close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 42px;
+  height: 42px;
+  background: url(/images/svg/popup-close-svg.svg) 50% 50% no-repeat;
+  &:hover {
+    cursor: pointer;
+  }
+}

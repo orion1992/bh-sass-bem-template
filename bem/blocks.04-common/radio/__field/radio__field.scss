@@ -1,0 +1,42 @@
+.radio__field {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 1px solid #cfcab4;
+  &:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: url('/images/svg/radio-svg.svg') 50% 50% no-repeat;
+    background-size: 0px 0px;
+    //animation: radioCheckAnimationREVERT 0.45s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  }
+}
+
+.radio input:checked + div span.radio__field {
+  &:before {
+    background: url('/images/svg/radio-svg.svg') 50% 50% no-repeat;
+    background-size: 12px 12px;
+    opacity: 1;
+    animation: radioCheckAnimation 0.45s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  }
+
+}
+@keyframes radioCheckAnimation {
+  0% { background-size: 0px 0px; opacity: 0;}
+  45% { opacity: 0; }
+  100% { background-size: 12px 12px; opacity: 1;}
+}
+@keyframes radioCheckAnimationREVERT {
+  0% { background-size: 12px 12px; opacity: 1;}
+  55% { opacity: 0; }
+  100% { background-size: 0px 0px; opacity: 0;}
+}

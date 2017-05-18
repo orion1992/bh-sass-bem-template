@@ -1,0 +1,55 @@
+
+//@mixin make-clear-xs($i: 1, $list: ".col-xs-#{$i}") {
+//  @for $i from (1 + 1) through $grid-columns {
+//    $list: "#{$list}, .col-xs-#{$i}";
+//  }
+//  #{$list} {
+//   + .clear_xs {
+//      &:nth-child(#{$i+1}n+1) {
+//        clear: both;
+//      }
+//   }
+//  }
+//}
+//percentage( $grid-columns/ $i );
+
+@mixin make-clear($class) {
+  .row_clear {
+    .col-#{$class}-2 {
+      &:nth-child(6n+1) {
+        clear: both;
+      }
+    }
+    .col-#{$class}-3 {
+      &:nth-child(4n+1) {
+        clear: both;
+      }
+    }
+    .col-#{$class}-4 {
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+    .col-#{$class}-6 {
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  @include make-clear(xs);
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @include make-clear(sm);
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include make-clear(md);
+}
+
+@media (min-width: $screen-lg-min) {
+  @include make-clear(lg);
+}

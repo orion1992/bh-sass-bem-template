@@ -1,0 +1,20 @@
+.content__inner {
+  position: relative;
+  padding: 25px 0 70px;
+  font-size: $fz-base;
+
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+/* media query max-width: 767px */
+@media only screen and (max-width: $screen-xs-max) {
+  .content__inner {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}

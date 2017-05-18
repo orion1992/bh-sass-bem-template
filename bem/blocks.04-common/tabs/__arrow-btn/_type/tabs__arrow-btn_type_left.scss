@@ -1,0 +1,17 @@
+.tabs__arrow-btn_type_left {
+  position: relative;
+  float:left;
+  border-top-left-radius: 5px;
+  &:before {
+    content:'';
+    position: absolute;
+    left: calc(50% - 3.5px);
+    top: calc(50% - 7.5px);
+    width: 15px;
+    height: 15px;
+    border: 1px solid $gray-main;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(45deg);
+  }
+}
