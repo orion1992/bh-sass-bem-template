@@ -4,6 +4,7 @@
         { block: 'jquery' },
         { block: 'bootstrap' },
         { block: 'font' },
+        { block: 'select' }
     ],
     shouldDeps: [
         { block: 'globals' },
