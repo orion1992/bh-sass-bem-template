@@ -1,71 +1,55 @@
 ;(function () {
-    var self = {},
-        nGaleUIX = {};
-    self.core = {
-        dqs: function (selector) {
-            return document.querySelectorAll(selector);
-        },
-        nodePresense: {
-            private: function (domElem,func) {
-                return this.operation.call(domElem, func);
+    var self = {};
+
+    self.core = function () {
+        var _methods = {},
+            _helpers = {
+                currentResolution: document.documentElement.clientWidth,
+
             },
-            operation: function (domElem, func) {
-                var elems = document.querySelectorAll(domElem),
+            _messages = {
+                nodePresenseFuncArgError: "INVALID FUNCTION ARGUMENT, SECOND ARGUMENT MUST BE AN ANONYMOUS FUNCTION"
+            }
+        self.core.prototype._methods = {
+            /**
+             *
+             * @param domElem
+             * @param func
+             * @returns {boolean}
+             */
+            nodePresense: function (parameters) {
+                if ((typeof parameters.func != 'function')&&(typeof parameters.func != 'undefined')) {
+                    throw _messages.nodePresenseFuncArgError;
+                    return;
+                }
+                var elems = document.querySelectorAll(parameters.domElem),
                     length = elems.length,
-                    func = func || function(){return true};
+                    func = parameters.func || function(){return true};
                 return length > 0 ?
                     (length == 1) ?
-                        func.call(elems[0], this) :
-                        func.call(elems, this)
-                    : false;
+                        func.call(null, elems[0]) :
+                        func.call(null, elems)
+                    : [];
             }
         }
 
-    }
-    for (var key in self.core) {
-        nGaleUIX[key] = self.core[key].private;
-    }
-    // var nGaleUIX = {
-    //
-    //     /**
-    //      *
-    //      * @param domElem
-    //      * @param func
-    //      * @returns {boolean}
-    //      */
-    //     nodePresence: function (domElem, func) {
-    //         return self.core.nodePresense.private(domElem, func);
-    //     }
-    // }
 
 
-    window.nGaleUIX = nGaleUIX;
+        for (var key in self.core.prototype._methods) {
+            _methods[key] = function() {
+                return self.core.prototype._methods[key].call(null, arguments[0]);
+            }
+        }
+
+        return _methods;
+    }
+
+
+    window.nGaleUIX = self.core();
 
 }());
 
 
-
-window.frontAPI = window.frontAPI || {};
-
-window.frontAPI.testModule = (function () {
-  var _private = {
-          item:'mazafake',
-          fuck: function () {
-              console.log(_private.item);
-          }
-      },
-      _titty = function () {
-          console.log('test');
-      }
-
-  return {
-      testFacade: function () {
-          _private.fuck();
-      }
-  };
-
-}());
-var currentScreenResolution = document.documentElement.clientWidth;
 
 $(function () {
     $(document).ready(function () {
@@ -142,14 +126,6 @@ function equalizeHeight(selector) {
     }
     return styles;
 }
-function checkAndStart(domElem, func) {
-    if ($(domElem).length > 0) {
-        var result = func.call($(domElem), null);
-        return result;
-    }
-}
-
-// var ADAPTIVE = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ? screen.width <= 767 : $(window).width() + 17 <= 767;
 
 function throttle(func, ms) {
 
